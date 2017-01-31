@@ -1,3 +1,5 @@
 #!/bin/bash
 
-kubectl create configmap fluentd-config-2 --from-file=fluentd.conf --namespace=kube-system
+cd configs/ || exit
+# kubectl apply -f 01-*.yaml
+kubectl create configmap fluentd-config --from-file=fluent.conf --namespace=kube-system
