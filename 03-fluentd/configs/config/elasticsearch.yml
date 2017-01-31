@@ -1,0 +1,12 @@
+action.destructive_requires_name: true
+cluster.name: k8s_logs
+discovery.zen.minimum_master_nodes: 1
+http.compression: true
+indices.queries.cache.size: 30%
+network.host: 0.0.0.0
+node.data: true
+node.ingest: true
+node.master: true
+path.data: /usr/share/elasticsearch/data
+thread_pool.bulk.queue_size: 300
+transport.bind_host: 0.0.0.0

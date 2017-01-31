@@ -3,14 +3,18 @@ kind: Service
 metadata:
   name: kibana-logging
   namespace: kube-system
+  # Internal ELB
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
   labels:
     k8s-app: kibana-logging
     kubernetes.io/cluster-service: "true"
     kubernetes.io/name: "Kibana"
 spec:
   type: LoadBalancer
-  loadBalancerSourceRanges:
-  - 10.0.0.0/8
+  # External ELB
+#  loadBalancerSourceRanges:
+#  - 10.0.0.0/8
   ports:
   - port: 5601
     protocol: TCP
