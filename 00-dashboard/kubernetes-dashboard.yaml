@@ -66,6 +66,8 @@ spec:
 kind: Service
 apiVersion: v1
 metadata:
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
   labels:
     app: kubernetes-dashboard
   name: kubernetes-dashboard
