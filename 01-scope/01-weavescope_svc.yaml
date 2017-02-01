@@ -13,5 +13,3 @@ spec:
   selector:
     app: weave-scope
     name: weave-scope-app
-    weave-cloud-component: scope
-    weave-scope-component: app
