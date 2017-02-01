@@ -1,3 +1,7 @@
-#
+# k8s dashboard
 
-Source: https://github.com/kubernetes/dashboard
+Install the dashboard plus an internal elb.
+
+## Sources
+
+- https://github.com/kubernetes/dashboard
