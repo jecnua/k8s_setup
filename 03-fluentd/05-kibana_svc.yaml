@@ -16,8 +16,8 @@ spec:
 #  loadBalancerSourceRanges:
 #  - 10.0.0.0/8
   ports:
-  - port: 5601
-    protocol: TCP
+  - port: 80
     targetPort: ui
+    protocol: TCP
   selector:
     k8s-app: kibana-logging
