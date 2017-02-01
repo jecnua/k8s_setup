@@ -6,7 +6,6 @@ metadata:
   labels:
     app: weave-scope-app-elb
   name: weave-scope-app-elb
-  namespace: kube-system
 spec:
   type: LoadBalancer
   ports:
