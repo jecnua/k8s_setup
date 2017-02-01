@@ -10,6 +10,8 @@ spec:
   type: LoadBalancer
   ports:
   - port: 80
+    targetPort: 4040
+    protocol: TCP
   selector:
     app: weave-scope
     name: weave-scope-app
