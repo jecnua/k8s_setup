@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
+  labels:
+    app: weave-scope-app
+  name: weave-scope-app
+  namespace: kube-system
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: weave-scope-app
