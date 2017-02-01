@@ -29,7 +29,7 @@ items:
         spec:
           containers:
             - name: app
-              image: 'weaveworks/scope:master-9b21183'
+              image: 'weaveworks/scope:latest'
               imagePullPolicy: IfNotPresent
               args:
                 - '--no-probe'
@@ -97,7 +97,7 @@ items:
         spec:
           containers:
             - name: agent
-              image: 'weaveworks/scope:master-9b21183'
+              image: 'weaveworks/scope:latest'
               imagePullPolicy: IfNotPresent
               args:
                 - '--no-app'
