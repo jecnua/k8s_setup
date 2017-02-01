@@ -1,4 +1,4 @@
-#
+# Simple pod to test with nslookup
 
 Test namespace.
 

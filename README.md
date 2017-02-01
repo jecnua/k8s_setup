@@ -21,3 +21,4 @@ To have an idea about how, check the _run.sh_.
 
 - Ingress
 - Mesh network
+- ES should be a Deployment
