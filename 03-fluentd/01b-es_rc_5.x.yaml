@@ -52,4 +52,4 @@ spec:
         emptyDir: {}
       - name: config-volume
         configMap:
-          name: config
+          name: es-config
