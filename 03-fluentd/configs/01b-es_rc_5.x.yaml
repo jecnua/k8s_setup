@@ -20,7 +20,7 @@ spec:
         kubernetes.io/cluster-service: "true"
     spec:
       containers:
-      - image: elasticsearch:5.1.2
+      - image: elasticsearch:5.2.0
         name: elasticsearch-logging
         resources:
           # need more cpu upon initialization, therefore burstable class
