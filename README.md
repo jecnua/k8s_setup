@@ -11,7 +11,7 @@ Some up-to-date templates to set up tools on a new k8s cluster.
 
 - YAML are for AWS (I hope you like ELBs :D)
 
-## usage
+## Usage
 
 Every directory has yaml files with a number in the name.
 That usually indicates the order they have to be run.
