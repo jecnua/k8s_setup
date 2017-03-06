@@ -15,3 +15,19 @@ spec:
   selector:
     app: weave-scope
     name: weave-scope-app
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: scope-np
+  labels:
+    name: scope-np
+spec:
+  type: NodePort
+  ports:
+    - port: 4040
+      nodePort: 30080
+      name: http
+  selector:
+    app: weave-scope
+    name: weave-scope-app
