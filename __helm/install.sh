@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 
-VERSION='2.1.3'
+VERSION='2.2.1'
 if [ $# -ne 0 ]
 then
   VERSION='$1'
