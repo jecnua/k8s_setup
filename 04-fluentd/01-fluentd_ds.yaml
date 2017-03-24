@@ -5,15 +5,13 @@ metadata:
   namespace: kube-system
   labels:
     k8s-app: fluentd-logging
-    version: v1
-    kubernetes.io/cluster-service: "true"
+    version: v1.0.0
 spec:
   template:
     metadata:
       labels:
         k8s-app: fluentd-logging
-        version: v1
-        kubernetes.io/cluster-service: "true"
+        version: v1.0.0
     spec:
       containers:
       - name: fluentd

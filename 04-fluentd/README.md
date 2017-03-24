@@ -4,6 +4,8 @@ Changed base kibana from the google version to docker hub.
 
 I then removed the old 2.x and made it work with 5.x! :)
 
+https://github.com/fluent/fluentd-kubernetes-daemonset
+
 ## Versions
 
 - Kibana/ES 5.2.0
