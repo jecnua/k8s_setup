@@ -6,7 +6,6 @@ metadata:
   labels:
     k8s-app: elasticsearch-logging
     version: v1.0.0
-    kubernetes.io/cluster-service: "true" # kubectl cluster-info
 spec:
   replicas: 1
   selector:
@@ -17,7 +16,6 @@ spec:
       labels:
         k8s-app: elasticsearch-logging
         version: v1.0.0
-        kubernetes.io/cluster-service: "true"
     spec:
       containers:
       - image: elasticsearch:5.2.2
