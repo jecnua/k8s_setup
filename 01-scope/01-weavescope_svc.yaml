@@ -1,21 +1,3 @@
-kind: Service
-apiVersion: v1
-metadata:
-  annotations:
-    service.beta.kubernetes.io/aws-load-balancer-internal: 0.0.0.0/0
-  labels:
-    app: weave-scope-app-elb
-  name: weave-scope-app-elb
-spec:
-  type: LoadBalancer
-  ports:
-  - port: 80
-    targetPort: 4040
-    protocol: TCP
-  selector:
-    app: weave-scope
-    name: weave-scope-app
----
 apiVersion: v1
 kind: Service
 metadata:
