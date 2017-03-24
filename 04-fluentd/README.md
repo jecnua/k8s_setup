@@ -6,12 +6,15 @@ I then removed the old 2.x and made it work with 5.x! :)
 
 https://github.com/fluent/fluentd-kubernetes-daemonset
 http://docs.fluentd.org/v0.12/articles/kubernetes-fluentd
-## Versions
 
-- Kibana/ES 5.2.0
+## Depends on
+
+- Kibana/ES 5.2.2
+
+Index name or pattern
+
+    kubernetes-*
 
 ## TODO
 
-- Make es clustering work
-- Make es data survive pod restart/update
-- Make kibana internal ELB
+- Move it to his own namespace
