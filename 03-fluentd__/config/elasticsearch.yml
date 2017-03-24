@@ -1,5 +1,5 @@
 action.destructive_requires_name: true
-cluster.name: ${cluster_name}
+cluster.name: k8s_logs
 discovery.zen.minimum_master_nodes: 1
 http.compression: true
 indices.queries.cache.size: 30%

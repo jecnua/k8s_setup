@@ -8,11 +8,9 @@ metadata:
     kubernetes.io/cluster-service: "true"
     kubernetes.io/name: "Elasticsearch"
 spec:
-  type: NodePort
   ports:
   - port: 9200
-    nodePort: 30001
     protocol: TCP
-    targetPort: api
+    targetPort: db
   selector:
     k8s-app: elasticsearch-logging
