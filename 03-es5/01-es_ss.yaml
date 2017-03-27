@@ -9,9 +9,6 @@ metadata:
     version: v1.0.0
 spec:
   serviceName: es-logs
-  selector:
-    k8s-app: es-logs
-    version: v1.0.0
   template:
     metadata:
       labels:
