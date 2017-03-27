@@ -15,6 +15,20 @@ spec:
   selector:
     k8s-app: kibana-logs
 ---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kibana-logs-int
+  namespace: logs
+  labels:
+    k8s-app: kibana-logs-int
+spec:
+  ports:
+  - port: 80
+    targetPort: ui
+  selector:
+    k8s-app: kibana-logs-int
+---
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
