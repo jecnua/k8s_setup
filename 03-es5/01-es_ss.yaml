@@ -104,12 +104,12 @@ spec:
       - name: config-volume
         configMap:
           name: es-config
-      volumeClaimTemplates:
-      - metadata:
-          name: es-persistent-storage
-        spec:
-          accessModes:
-            - ReadWriteOnce
-          resources:
-            requests:
-              storage: 512Gi
+  volumeClaimTemplates:
+  - metadata:
+      name: es-persistent-storage
+    spec:
+      accessModes:
+        - ReadWriteOnce
+      resources:
+        requests:
+          storage: 512Gi
