@@ -2,15 +2,15 @@ apiVersion: extensions/v1beta1
 kind: DaemonSet
 metadata:
   name: fluentd
-  namespace: kube-system
+  namespace: logs
   labels:
-    k8s-app: fluentd-logging
+    k8s-app: fluentd-logs
     version: v1.0.0
 spec:
   template:
     metadata:
       labels:
-        k8s-app: fluentd-logging
+        k8s-app: fluentd-logs
         version: v1.0.0
     spec:
       containers:

@@ -2,5 +2,5 @@
 
 kubectl create configmap fluentd-config \
   --from-file=fluentd_config/fluent.conf \
-  --namespace=kube-system
+  --namespace=logs
 kubectl apply -f 01-fluentd_ds.yaml
