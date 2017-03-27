@@ -26,7 +26,7 @@ spec:
   - port: 80
     targetPort: ui
   selector:
-    k8s-app: kibana-logs-int
+    k8s-app: kibana-logs
 ---
 apiVersion: extensions/v1beta1
 kind: Ingress
