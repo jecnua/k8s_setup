@@ -39,5 +39,5 @@ spec:
     http:
       paths:
       - backend:
-          serviceName: kibana-logs
+          serviceName: logs/kibana-logs-int
           servicePort: 80
