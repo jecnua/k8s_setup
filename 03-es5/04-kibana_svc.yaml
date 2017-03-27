@@ -14,3 +14,17 @@ spec:
     protocol: TCP
   selector:
     k8s-app: kibana-logs
+---
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: kibana-logs
+spec:
+  rules:
+  - host: kibana-logs.mgmt
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: kibana-logs
+          servicePort: 80
