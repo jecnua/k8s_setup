@@ -24,7 +24,6 @@ spec:
   - host: kibana-logs.mgmt
     http:
       paths:
-      - path: /
-        backend:
+      - backend:
           serviceName: kibana-logs
           servicePort: 80
