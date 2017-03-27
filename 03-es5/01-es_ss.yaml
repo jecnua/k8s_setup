@@ -10,7 +10,7 @@ metadata:
 provisioner: kubernetes.io/aws-ebs
 parameters:
   type: gp2
-  encrypted: true
+  encrypted: "true"
 ---
 # https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
 apiVersion: apps/v1beta1
