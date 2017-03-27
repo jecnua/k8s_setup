@@ -1,22 +1,22 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: kibana-logging
-  namespace: kube-system
+  name: kibana-logs
+  namespace: logs
   labels:
-    k8s-app: kibana-logging
+    k8s-app: kibana-logs
 spec:
   replicas: 1
   selector:
     matchLabels:
-      k8s-app: kibana-logging
+      k8s-app: kibana-logs
   template:
     metadata:
       labels:
-        k8s-app: kibana-logging
+        k8s-app: kibana-logs
     spec:
       containers:
-      - name: kibana-logging
+      - name: kibana-logs
         image: kibana:5.2.2
         resources:
           # keep request = limit to keep this container in guaranteed class
@@ -26,7 +26,7 @@ spec:
             cpu: 100m
         env:
           - name: "ELASTICSEARCH_URL"
-            value: "http://elasticsearch-logging:9200"
+            value: "http://es-logs:9200"
         ports:
         - containerPort: 5601
           name: ui
