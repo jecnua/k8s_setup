@@ -1,3 +1,8 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: logs
+---
 # https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
 apiVersion: apps/v1beta1
 kind: StatefulSet
