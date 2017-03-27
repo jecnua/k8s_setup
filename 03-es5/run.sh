@@ -10,4 +10,4 @@ kubectl apply -f 03-kibana_deploy.yaml
 kubectl apply -f 04-kibana_svc.yaml
 
 kubectl get ns,pv && \
-  kubectl get cm,pvc,ds,statefulset,pods,deploy,svc -n logs
+  kubectl get cm,pvc,ds,statefulset,pods,deploy,svc,ing -n logs
