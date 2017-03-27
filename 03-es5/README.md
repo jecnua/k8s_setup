@@ -2,7 +2,5 @@
 
 ## TODO
 
-- Move it to his own namespace
-- Make it a deployment of 1 (or ds)
+- Data (Volume) is not encrypted
 - Make es clustering work
-- Make es data survive pod restart/update

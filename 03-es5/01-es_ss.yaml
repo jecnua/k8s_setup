@@ -34,7 +34,7 @@ spec:
           protocol: TCP
         volumeMounts:
         - name: es-persistent-storage
-          mountPath: /data
+          mountPath: /usr/share/elasticsearch/data/
         - name: config-volume
           mountPath: /usr/share/elasticsearch/config/
         env:

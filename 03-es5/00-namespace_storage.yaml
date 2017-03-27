@@ -12,4 +12,4 @@ metadata:
 provisioner: kubernetes.io/aws-ebs
 parameters:
   type: gp2
-  encrypted: "true"
+  # encrypted: "true" # FIXME: This doesn't work
