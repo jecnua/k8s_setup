@@ -32,11 +32,12 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: kibana-logs
+  namespace: logs
 spec:
   rules:
   - host: kibana-logs.mgmt
     http:
       paths:
       - backend:
-          serviceName: kibana-logs-int
+          serviceName: kibana-logs
           servicePort: 80
