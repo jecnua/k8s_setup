@@ -52,6 +52,9 @@ spec:
       - name: config-volume
         configMap:
           name: es-config
+      - name: es-persistent-storage
+        persistentVolumeClaim:
+          claimName: es-persistent-storage
   volumeClaimTemplates:
   - metadata:
       name: es-persistent-storage
