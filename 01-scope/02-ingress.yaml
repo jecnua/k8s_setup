@@ -1,0 +1,12 @@
+# apiVersion: extensions/v1beta1
+# kind: Ingress
+# metadata:
+#   name: scope-ing
+# spec:
+#   rules:
+#   - host: youhost-here
+#     http:
+#       paths:
+#       - backend:
+#           serviceName: scope-np
+#           servicePort: 4040

@@ -1,8 +1,13 @@
 # Waeve scope
 
-Will install the latest scope.
+Will install the latest Weave scope on the k8s cluster.
 
-    nodePort: 30080
+    Namespace: default
+
+## Expose it
+
+To expose it I advice an ingress rule. An example is on file commented.
+Change it for your hostname.
 
 ## Sources
 
