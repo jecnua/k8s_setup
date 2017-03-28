@@ -8,5 +8,5 @@
 #     http:
 #       paths:
 #       - backend:
-#           serviceName: scope-np
-#           servicePort: 4040
+#           serviceName: weave-scope-app
+#           servicePort: 80
