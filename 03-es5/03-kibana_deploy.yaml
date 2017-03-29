@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: kibana-logs
-        image: kibana:5.3.0
+        image: docker.elastic.co/kibana/kibana:5.3.0
         resources:
           # keep request = limit to keep this container in guaranteed class
           limits:

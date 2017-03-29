@@ -17,7 +17,7 @@ spec:
         version: v1.0.0
     spec:
       containers:
-      - image: elasticsearch:5.3.0
+      - image: docker.elastic.co/elasticsearch/elasticsearch:5.3.0
         name: es-logs
         resources:
           # need more cpu upon initialization, therefore burstable class
