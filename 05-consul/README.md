@@ -1,0 +1,1 @@
+# Consul standalone for registrator

@@ -1,0 +1,53 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: consul-registrator
+  namespace: metrics
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: consul-registrator
+    spec:
+      containers:
+      - name: consul-registrator
+        image: consul:0.7.5
+        ports:
+        - name: http
+          containerPort: 8500
+        - name: dns
+          containerPort: 8600
+        - name: server
+          containerPort: 8300
+        resources:
+          requests:
+            memory: 30Mi
+            cpu: 100m
+          limits:
+            memory: 50Mi
+            cpu: 200m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: metrics
+  labels:
+    app: consul-registrator
+  name: consul-registrator
+spec:
+  ports:
+  - name: http
+    port: 8500
+    targetPort: http
+    protocol: TCP
+  - name: dns
+    port: 8600
+    targetPort: dns
+    protocol: TCP
+  - name: server
+    port: 8300
+    targetPort: server
+    protocol: TCP
+  selector:
+    app: consul-registrator
