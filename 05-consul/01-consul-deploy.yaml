@@ -14,12 +14,24 @@ spec:
       - name: consul-registrator
         image: consul:0.7.5
         ports:
-        - name: http
-          containerPort: 8500
-        - name: dns
-          containerPort: 8600
-        - name: server
-          containerPort: 8300
+        - containerPort: 8500
+          name: ui-port
+        - containerPort: 8400
+          name: alt-port
+        - containerPort: 53
+          name: udp-port
+        - containerPort: 8543
+          name: https-port
+        - containerPort: 8500
+          name: http-port
+        - containerPort: 8301
+          name: serflan
+        - containerPort: 8302
+          name: serfwan
+        - containerPort: 8600
+          name: consuldns
+        - containerPort: 8300
+          name: server
         resources:
           requests:
             memory: 30Mi
@@ -39,15 +51,17 @@ spec:
   ports:
   - name: http
     port: 8500
-    targetPort: http
-    protocol: TCP
-  - name: dns
-    port: 8600
-    targetPort: dns
-    protocol: TCP
+  - name: https
+    port: 8543
+  - name: rpc
+    port: 8400
+  - name: serflan
+    port: 8301
+  - name: serfwan
+    port: 8302
   - name: server
     port: 8300
-    targetPort: server
-    protocol: TCP
+  - name: consuldns
+    port: 53
   selector:
     app: consul-registrator
