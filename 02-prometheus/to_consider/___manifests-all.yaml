@@ -2176,7 +2176,7 @@ spec:
     protocol: TCP
   selector:
     app: kube-state-metrics
-    
+
 ---
 apiVersion: extensions/v1beta1
 kind: DaemonSet
