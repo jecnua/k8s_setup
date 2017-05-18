@@ -103,4 +103,4 @@ spec:
         - /nginx-ingress-controller
         - --default-backend-service=$(POD_NAMESPACE)/nginx-default-backend
         - --configmap=$(POD_NAMESPACE)/ingress-nginx
-        - --publish-service=$(POD_NAMESPACE)/ingress-nginx
+        # - --publish-service=$(POD_NAMESPACE)/ingress-nginx
